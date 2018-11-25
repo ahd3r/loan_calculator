@@ -1,0 +1,22 @@
+.title{
+    font-size: 40px;
+}
+.titler{
+    font-size: 30px;
+}
+.b{
+    font-size:30px;
+}
+.mistake{
+    display: none;
+}
+.res{
+    display: none;
+}
+.preloader{
+    display: none;
+}
+.main{
+    background: white;
+    border-radius: 10px;
+}
