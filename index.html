@@ -25,23 +25,25 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
+                            <form id="calculate">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="loan" placeholder="Loan Amount">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
                                 </div>
-                                <input type="text" class="form-control" id="loan" placeholder="Loan Amount">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">.00</span>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="percent" placeholder="Interest">
                                 </div>
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">%</span>
-                                </div>
-                                <input type="text" class="form-control" id="percent" placeholder="Interest">
-                            </div>
-                            <input type="text" class="mb-3 form-control" id="years" placeholder="Loan Years">
-                            <button class="mb-3 btn btn-dark btn-block b" id="calculate">Calculate</button>
+                                <input type="text" class="mb-3 form-control" id="years" placeholder="Loan Years">
+                                <input type="submit" class="mb-3 btn btn-dark btn-block b" value="Calculate">
+                            </form>
                         </div>
                     </div>
                     <div class="mistake mb-2">

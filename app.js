@@ -1,6 +1,6 @@
-document.querySelector('#calculate').addEventListener('click', Calculate);
+document.querySelector('#calculate').addEventListener('submit', Calculate);
 
-function Calculate(){
+function Calculate(e){
     const checkIsTheLoanNum=Number(document.querySelector('#loan').value);
     const checkIsThePercentNum=Number(document.querySelector('#percent').value);
     const checkIsTheYearsNum=Number(document.querySelector('#years').value);
@@ -19,9 +19,13 @@ function Calculate(){
             for(let i=0; i<checkIsTheYearsNum-1; i++){
                 totalPayment = (totalPayment*checkIsThePercentNum/100)+totalPayment;
             }
+            totalPayment=totalPayment.toFixed(2);
+            const monthlyPayment = totalPayment/(checkIsTheYearsNum*12);
+            const totalInterest=totalPayment-checkIsTheLoanNum;
             document.querySelector('#totalPayment').value=totalPayment;
-            document.querySelector('#totalInterest').value=totalPayment-checkIsTheLoanNum;
-            document.querySelector('#monthlyPayment').value=((checkIsTheLoanNum*checkIsThePercentNum/100)+checkIsTheLoanNum)/(checkIsTheYearsNum*12);
+            document.querySelector('#totalInterest').value=totalInterest.toFixed(2);
+            document.querySelector('#monthlyPayment').value=monthlyPayment.toFixed(2);
         },1000);
     }
+    e.preventDefault();
 }
